@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Nebulosa.Facturacion.Aplicacion.Servicio/1.0.0": {
+        "dependencies": {
+          "Nebulosa.Facturacion.Compartida.DTO": "1.0.0"
+        },
+        "runtime": {
+          "Nebulosa.Facturacion.Aplicacion.Servicio.dll": {}
+        }
+      },
+      "Nebulosa.Facturacion.Compartida.DTO/1.0.0": {
+        "runtime": {
+          "Nebulosa.Facturacion.Compartida.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Nebulosa.Facturacion.Aplicacion.Servicio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Nebulosa.Facturacion.Compartida.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

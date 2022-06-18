@@ -1,0 +1,12 @@
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.deps.json
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.csproj.AssemblyReference.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.AssemblyInfoInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.AssemblyInfo.cs
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.csproj.CoreCompileInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\refint\Nebulosa.Facturacion.Compartida.DTO.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.DTO\obj\Debug\net6.0\ref\Nebulosa.Facturacion.Compartida.DTO.dll

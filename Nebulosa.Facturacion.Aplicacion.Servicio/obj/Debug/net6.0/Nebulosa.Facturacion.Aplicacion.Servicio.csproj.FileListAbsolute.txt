@@ -1,0 +1,15 @@
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\bin\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.deps.json
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\bin\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\bin\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.csproj.AssemblyReference.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.AssemblyInfoInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.AssemblyInfo.cs
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.csproj.CoreCompileInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.csproj.CopyComplete
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\refint\Nebulosa.Facturacion.Aplicacion.Servicio.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\Nebulosa.Facturacion.Aplicacion.Servicio.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Aplicacion.Servicio\obj\Debug\net6.0\ref\Nebulosa.Facturacion.Aplicacion.Servicio.dll

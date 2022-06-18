@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>de67c0b5-5849-4e23-8b67-0ed0f0fc8cad</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoADatos\Nebulosa.Facturacion.AccesoADatos.csproj" />
+    <ProjectReference Include="..\LogicaDeNegocio\Nebulosa.Facturacion.LogicaDeNegocio.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Aplicacion.Enrutador\Nebulosa.Facturacion.Aplicacion.Enrutador.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Aplicacion.Servicio\Nebulosa.Facturacion.Aplicacion.Servicio.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Compartida.DTO\Nebulosa.Facturacion.Compartida.DTO.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Compartida.Helper\Nebulosa.Facturacion.Compartida.Helper.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Repositorio\Nebulosa.Facturacion.Repositorio.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.deps.json
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.csproj.AssemblyReference.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.AssemblyInfoInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.AssemblyInfo.cs
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.csproj.CoreCompileInputs.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\refint\Nebulosa.Facturacion.Compartida.Helper.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\ref\Nebulosa.Facturacion.Compartida.Helper.dll

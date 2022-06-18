@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "063WAbbYFkDNtCGb/4txDofnSASD0zeYKTuZ8vkodnc=",
+  "Source": "Nebulosa.Facturacion.Servidor",
+  "BasePath": "_content/Nebulosa.Facturacion.Servidor",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nebulosa.Facturacion.Aplicacion.Enrutador\Nebulosa.Facturacion.Aplicacion.Enrutador.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Compartida.DTO\Nebulosa.Facturacion.Compartida.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

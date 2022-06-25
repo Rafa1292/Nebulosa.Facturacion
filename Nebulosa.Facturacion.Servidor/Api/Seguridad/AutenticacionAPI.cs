@@ -19,6 +19,9 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
                 (UsuarioLoginDTO usuario, IAutenticacionServicio servicio) => Login(usuario, servicio))
                 .Accepts<UsuarioLoginDTO>("application/json")
                 .Produces<string>();
+
+            app.MapPost("/EnviarCorreoDeRecuperacion",
+                (MailDTO mail) => EnviarCorreoDeRecuperacion(mail));
         }
 
         async Task<IResult> Login(UsuarioLoginDTO usuario, IAutenticacionServicio servicio)
@@ -58,6 +61,11 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        async Task EnviarCorreoDeRecuperacion(MailDTO mail)
+        {
+            await MailHelper.SendMail(mail, _app.Configuration["Mail:Password"]);
         }
 
     }

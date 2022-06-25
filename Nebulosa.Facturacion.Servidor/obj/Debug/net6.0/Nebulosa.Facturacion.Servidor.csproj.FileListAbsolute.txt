@@ -77,3 +77,4 @@ C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Servidor\bin\Debug\net
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Servidor\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Servidor\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Servidor\obj\Debug\net6.0\Nebulosa.Facturacion.Servidor.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Servidor\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll

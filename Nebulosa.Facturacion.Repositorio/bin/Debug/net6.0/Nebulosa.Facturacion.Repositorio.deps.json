@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore.Design": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
-          "Nebulosa.Facturacion.AccesoADatos": "1.0.0"
+          "Nebulosa.Facturacion.AccesoADatos": "1.0.0",
+          "Nebulosa.Facturacion.Compartida.Helper": "1.0.0"
         },
         "runtime": {
           "Nebulosa.Facturacion.Repositorio.dll": {}
@@ -571,6 +572,14 @@
           "Nebulosa.Facturacion.Compartida.DTO.dll": {}
         }
       },
+      "Nebulosa.Facturacion.Compartida.Helper/1.0.0": {
+        "dependencies": {
+          "Nebulosa.Facturacion.Compartida.DTO": "1.0.0"
+        },
+        "runtime": {
+          "Nebulosa.Facturacion.Compartida.Helper.dll": {}
+        }
+      },
       "Nebulosa.Facturacion.LogicaDeNegocio/1.0.0": {
         "dependencies": {
           "Nebulosa.Facturacion.Aplicacion.Enrutador": "1.0.0",
@@ -940,6 +949,11 @@
       "sha512": ""
     },
     "Nebulosa.Facturacion.Compartida.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Nebulosa.Facturacion.Compartida.Helper/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

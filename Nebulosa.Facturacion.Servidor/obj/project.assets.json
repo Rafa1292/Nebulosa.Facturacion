@@ -847,7 +847,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
-          "Nebulosa.Facturacion.AccesoADatos": "1.0.0"
+          "Nebulosa.Facturacion.AccesoADatos": "1.0.0",
+          "Nebulosa.Facturacion.Compartida.Helper": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Nebulosa.Facturacion.Repositorio.dll": {}

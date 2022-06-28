@@ -12,8 +12,10 @@ namespace Nebulosa.Facturacion.LogicaDeNegocio.Usuarios
         Task ActualiceElNombreDeUsuario(UsuarioDTO usuarioDTO);
         Task ActualiceLaContraseña(UsuarioDTO usuarioDTO);
         Task AgregueElUsuario(UsuarioDTO usuarioDTO);
+        Task<string> ObtengaElTokenDerecuperacionDeContraseña(string correo);
         Task<UsuarioDTO> ObtengaElUsuario(int id);
         Task<UsuarioDTO> ObtengaElUsuario(UsuarioLoginDTO usuarioLogin);
         Task<List<UsuarioDTO>> ObtengaLaListaDeUsuarios();
+        Task RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña);
     }
 }

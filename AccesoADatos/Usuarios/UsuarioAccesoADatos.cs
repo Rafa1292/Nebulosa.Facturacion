@@ -62,5 +62,15 @@ namespace Nebulosa.Facturacion.AccesoADatos.Usuarios
             await _repositorio.ActualiceLaContraseña(usuario, usuarioDTO.ContraseñaAnterior);
         }
 
+        public async Task<string> ObtengaElTokenDerecuperacionDeContraseña(string correo)
+        {
+            return await _repositorio.ObtengaElTokenDerecuperacionDeContraseña(correo);
+        }
+
+        public async Task RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña)
+        {
+            await _repositorio.RecupereLaContraseña(recuperarContraseña);
+        }
+
     }
 }

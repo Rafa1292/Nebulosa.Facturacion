@@ -51,6 +51,14 @@ namespace Nebulosa.Facturacion.LogicaDeNegocio.Usuarios
             return await _usuarioAcceso.ObtengaElUsuario(usuarioLogin);
         }
 
+        public async Task<string> ObtengaElTokenDerecuperacionDeContraseña(string correo)
+        {
+            return await _usuarioAcceso.ObtengaElTokenDerecuperacionDeContraseña(correo);
+        }
 
+        public async Task RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña)
+        {
+            await _usuarioAcceso.RecupereLaContraseña(recuperarContraseña);
+        }
     }
 }

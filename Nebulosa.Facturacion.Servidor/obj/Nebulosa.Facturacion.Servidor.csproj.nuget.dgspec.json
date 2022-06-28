@@ -377,6 +377,9 @@
             "projectReferences": {
               "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj": {
                 "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj"
+              },
+              "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj": {
+                "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj"
               }
             }
           }

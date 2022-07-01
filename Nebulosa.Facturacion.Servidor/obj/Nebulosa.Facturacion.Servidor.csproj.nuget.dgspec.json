@@ -316,7 +316,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.DTO\\Nebulosa.Facturacion.Compartida.DTO.csproj": {
+                "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.DTO\\Nebulosa.Facturacion.Compartida.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -373,6 +377,9 @@
             "projectReferences": {
               "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj": {
                 "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj"
+              },
+              "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj": {
+                "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj"
               }
             }
           }
@@ -485,6 +492,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.6, )"

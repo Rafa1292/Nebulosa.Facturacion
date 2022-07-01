@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nebulosa.Facturacion.Compartida.DTO\Nebulosa.Facturacion.Compartida.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

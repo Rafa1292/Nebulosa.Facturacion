@@ -19,6 +19,12 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
                 (UsuarioLoginDTO usuario, IAutenticacionServicio servicio) => Login(usuario, servicio))
                 .Accepts<UsuarioLoginDTO>("application/json")
                 .Produces<string>();
+
+            app.MapPost("/EnviarCorreoDeRecuperacion",
+                (MailDTO mail, IAutenticacionServicio servicio) => EnviarCorreoDeRecuperacion(mail, servicio));
+
+            app.MapPost("/RecupereLaContraseña",
+                (RecuperarContraseñaDTO recuperarContraseña, IAutenticacionServicio servicio) => RecupereLaContraseña(recuperarContraseña, servicio));
         }
 
         async Task<IResult> Login(UsuarioLoginDTO usuario, IAutenticacionServicio servicio)
@@ -39,25 +45,78 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
 
         string ObtengaElToken(UsuarioDTO usuario)
         {
-            var claims = new[]
+            try
             {
+
+                var claims = new[]
+                {
                 new Claim(ClaimTypes.NameIdentifier, usuario.Nombre),
                 new Claim(ClaimTypes.Email, usuario.Correo),
                 new Claim(ClaimTypes.Name, usuario.Nombre),
              };
+                var token = new JwtSecurityToken(
+                    issuer: _app.Configuration["Jwt:Issuer"],
+                    audience: _app.Configuration["Jwt:Audience"],
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddDays(60),
+                    notBefore: DateTime.UtcNow,
+                    signingCredentials: new SigningCredentials(
+                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_app.Configuration["Jwt:Key"])),
+                        SecurityAlgorithms.HmacSha256)
+                );
 
-            var token = new JwtSecurityToken(
-                issuer: _app.Configuration["Jwt:Issuer"],
-                audience: _app.Configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddDays(60),
-                notBefore: DateTime.UtcNow,
-                signingCredentials: new SigningCredentials(
-                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_app.Configuration["Jwt:Key"])),
-                    SecurityAlgorithms.HmacSha256)
-            );
+                return new JwtSecurityTokenHandler().WriteToken(token);
+            }
+            catch (Exception e)
+            {
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+                throw new Exception(e.Message);
+            }
+        }
+
+        async Task EnviarCorreoDeRecuperacion(MailDTO mail, IAutenticacionServicio servicio)
+        {
+            try
+            {
+                string linkDeRecuperacion = await ObtenerLinkDeRecuperacion(mail.Address, servicio);
+                mail.Body += linkDeRecuperacion;
+                await MailHelper.SendMail(mail, _app.Configuration["Mail:Password"]);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+
+        async Task<string> ObtenerLinkDeRecuperacion(string mail, IAutenticacionServicio servicio)
+        {
+            try
+            {
+                string token = await servicio.ObtengaElTokenDerecuperacionDeContraseña(mail);
+                string linkDeRecuperacion = $"http://localhost:8080/new-password/{token}";
+                return linkDeRecuperacion;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+
+        }
+
+        async Task<IResult> RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña, IAutenticacionServicio servicio)
+        {
+            try
+            {
+                await servicio.RecupereLaContraseña(recuperarContraseña);
+                return Results.Ok();
+            }
+            catch (Exception e)
+            {
+
+                return Results.Conflict(e.Message);
+            }
         }
 
     }

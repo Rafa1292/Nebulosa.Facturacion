@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9X3kfRhVR8JKEq7ooAYuBlDPtLanA41p8OfMwCNCXZOGT6DOdqu9ooWQcbv46M+8L3s1gp6mVn6TSPN0CyIMqQ==",
+  "dgSpecHash": "SdUhqRQskRIAfRnQySnRFjxOkXrPpujRPvEUAMfy7kgLP5K6/a8bGHd1djQc1nc2MACIrM5P5CDybP0dJFV7pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Servidor\\Nebulosa.Facturacion.Servidor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rvill\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.6\\microsoft.aspnetcore.authentication.google.6.0.6.nupkg.sha512",
     "C:\\Users\\rvill\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.6\\microsoft.aspnetcore.authentication.jwtbearer.6.0.6.nupkg.sha512",
     "C:\\Users\\rvill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.6\\microsoft.aspnetcore.cryptography.internal.6.0.6.nupkg.sha512",
     "C:\\Users\\rvill\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.6\\microsoft.aspnetcore.cryptography.keyderivation.6.0.6.nupkg.sha512",

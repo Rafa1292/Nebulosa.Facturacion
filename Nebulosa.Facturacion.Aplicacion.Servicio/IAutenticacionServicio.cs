@@ -10,5 +10,7 @@ namespace Nebulosa.Facturacion.Aplicacion.Servicio
     public interface IAutenticacionServicio
     {
         Task<UsuarioDTO> ObtenerUsuario(UsuarioLoginDTO usuarioLogin);
+        Task<string> ObtengaElTokenDerecuperacionDeContraseña(string correo);
+        Task RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña);
     }
 }

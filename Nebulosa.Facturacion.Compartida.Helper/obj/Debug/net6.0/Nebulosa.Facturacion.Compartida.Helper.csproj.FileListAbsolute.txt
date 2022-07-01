@@ -10,3 +10,6 @@ C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\refint\Nebulosa.Facturacion.Compartida.Helper.dll
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.pdb
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\ref\Nebulosa.Facturacion.Compartida.Helper.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.DTO.pdb
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Compartida.Helper\obj\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.csproj.CopyComplete

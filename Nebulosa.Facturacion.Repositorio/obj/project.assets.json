@@ -746,6 +746,19 @@
           "bin/placeholder/Nebulosa.Facturacion.Compartida.DTO.dll": {}
         }
       },
+      "Nebulosa.Facturacion.Compartida.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Nebulosa.Facturacion.Compartida.DTO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nebulosa.Facturacion.Compartida.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nebulosa.Facturacion.Compartida.Helper.dll": {}
+        }
+      },
       "Nebulosa.Facturacion.LogicaDeNegocio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2091,6 +2104,11 @@
       "path": "../Nebulosa.Facturacion.Compartida.DTO/Nebulosa.Facturacion.Compartida.DTO.csproj",
       "msbuildProject": "../Nebulosa.Facturacion.Compartida.DTO/Nebulosa.Facturacion.Compartida.DTO.csproj"
     },
+    "Nebulosa.Facturacion.Compartida.Helper/1.0.0": {
+      "type": "project",
+      "path": "../Nebulosa.Facturacion.Compartida.Helper/Nebulosa.Facturacion.Compartida.Helper.csproj",
+      "msbuildProject": "../Nebulosa.Facturacion.Compartida.Helper/Nebulosa.Facturacion.Compartida.Helper.csproj"
+    },
     "Nebulosa.Facturacion.LogicaDeNegocio/1.0.0": {
       "type": "project",
       "path": "../LogicaDeNegocio/Nebulosa.Facturacion.LogicaDeNegocio.csproj",
@@ -2103,7 +2121,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
-      "Nebulosa.Facturacion.AccesoADatos >= 1.0.0"
+      "Nebulosa.Facturacion.AccesoADatos >= 1.0.0",
+      "Nebulosa.Facturacion.Compartida.Helper >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2135,6 +2154,9 @@
           "projectReferences": {
             "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj": {
               "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\AccesoADatos\\Nebulosa.Facturacion.AccesoADatos.csproj"
+            },
+            "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj": {
+              "projectPath": "C:\\Users\\rvill\\source\\repos\\Nebulosa\\Nebulosa.Facturacion.Compartida.Helper\\Nebulosa.Facturacion.Compartida.Helper.csproj"
             }
           }
         }

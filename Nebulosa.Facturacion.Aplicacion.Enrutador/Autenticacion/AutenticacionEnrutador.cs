@@ -16,9 +16,20 @@ namespace Nebulosa.Facturacion.Aplicacion.Enrutador.Autenticacion
         {
             _usuarioServicio = usuarioServicio;
         }
+
         public async Task<UsuarioDTO> ObtenerUsuario(UsuarioLoginDTO usuarioLogin)
         {
             return await _usuarioServicio.ObtengaElUsuario(usuarioLogin);
+        }
+
+        public async Task<string> ObtengaElTokenDerecuperacionDeContraseña(string correo)
+        {
+            return await _usuarioServicio.ObtengaElTokenDerecuperacionDeContraseña(correo);
+        }
+
+        public async Task RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña)
+        {
+            await _usuarioServicio.RecupereLaContraseña(recuperarContraseña);
         }
     }
 }

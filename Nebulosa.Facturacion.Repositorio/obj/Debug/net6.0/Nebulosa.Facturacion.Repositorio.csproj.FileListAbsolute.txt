@@ -23,3 +23,5 @@ C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\obj\Debug\
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\obj\Debug\net6.0\ref\Nebulosa.Facturacion.Repositorio.dll
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\bin\Debug\net6.0\Nebulosa.Facturacion.Repositorio.runtimeconfig.json
 C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\obj\Debug\net6.0\Nebulosa.Facturacion.Repositorio.genruntimeconfig.cache
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.dll
+C:\Users\rvill\source\repos\Nebulosa\Nebulosa.Facturacion.Repositorio\bin\Debug\net6.0\Nebulosa.Facturacion.Compartida.Helper.pdb

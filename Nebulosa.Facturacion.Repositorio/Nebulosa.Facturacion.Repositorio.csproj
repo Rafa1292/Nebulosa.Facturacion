@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccesoADatos\Nebulosa.Facturacion.AccesoADatos.csproj" />
+    <ProjectReference Include="..\Nebulosa.Facturacion.Compartida.Helper\Nebulosa.Facturacion.Compartida.Helper.csproj" />
   </ItemGroup>
 
 </Project>

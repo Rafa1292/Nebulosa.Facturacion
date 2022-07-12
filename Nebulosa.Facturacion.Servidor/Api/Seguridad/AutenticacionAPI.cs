@@ -27,19 +27,19 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
                 (RecuperarContraseñaDTO recuperarContraseña, IAutenticacionServicio servicio) => RecupereLaContraseña(recuperarContraseña, servicio));
         }
 
-        async Task<IResult> Login(UsuarioLoginDTO usuario, IAutenticacionServicio servicio)
+        async Task<RespuestaAPI<string>> Login(UsuarioLoginDTO usuario, IAutenticacionServicio servicio)
         {
             try
             {
                 var usuarioLogueado = await servicio.ObtenerUsuario(usuario);
                 string tokenString = ObtengaElToken(usuarioLogueado);
 
-                return Results.Ok(tokenString);
+                return new RespuestaAPI<string>(false, tokenString);
 
             }
             catch (Exception e)
             {
-                return Results.Conflict(e.Message);
+                return new RespuestaAPI<string>(true, e.Message);
             }
         }
 
@@ -74,18 +74,19 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
             }
         }
 
-        async Task EnviarCorreoDeRecuperacion(MailDTO mail, IAutenticacionServicio servicio)
+        async Task<RespuestaAPI<bool>> EnviarCorreoDeRecuperacion(MailDTO mail, IAutenticacionServicio servicio)
         {
             try
             {
                 string linkDeRecuperacion = await ObtenerLinkDeRecuperacion(mail.Address, servicio);
                 mail.Body += linkDeRecuperacion;
                 await MailHelper.SendMail(mail, _app.Configuration["Mail:Password"]);
+                return new RespuestaAPI<bool>(false, "Correo  enviado exitosamente");
             }
             catch (Exception e)
             {
 
-                throw new Exception(e.Message);
+                return new RespuestaAPI<bool>(true, e.Message);
             }
         }
 
@@ -105,17 +106,17 @@ namespace Nebulosa.Facturacion.Servidor.Api.Seguridad
 
         }
 
-        async Task<IResult> RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña, IAutenticacionServicio servicio)
+        async Task<RespuestaAPI<bool>> RecupereLaContraseña(RecuperarContraseñaDTO recuperarContraseña, IAutenticacionServicio servicio)
         {
             try
             {
                 await servicio.RecupereLaContraseña(recuperarContraseña);
-                return Results.Ok();
+                return new RespuestaAPI<bool>(false, "Operacion realizada con exito");
             }
             catch (Exception e)
             {
 
-                return Results.Conflict(e.Message);
+                return new RespuestaAPI<bool>(true, e.Message);
             }
         }
 

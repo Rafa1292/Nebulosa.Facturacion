@@ -25,5 +25,22 @@ namespace Nebulosa.Facturacion.Repositorio
 
         public DbSet<CategoriaDeProducto> CategoriasDeProducto { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+
+            builder.Entity<CategoriaDeProducto>()
+                .HasIndex(c => c.Nombre)
+                .IsUnique(true);
+
+            builder.Entity<Usuario>()
+                .HasIndex(c => c.Correo)
+                .IsUnique(true);
+        }
     }
 }

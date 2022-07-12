@@ -60,7 +60,7 @@ namespace Nebulosa.Facturacion.Repositorio
 
         public async Task<Usuario> ObtengaElUsuario(string correo)
         {
-            return await _contexto.Usuarios.AsNoTracking().FirstAsync(x => x.Correo.ToLower() == correo.ToLower());
+            return await _contexto.Usuarios.AsNoTracking().FirstOrDefaultAsync(x => x.Correo.ToLower() == correo.ToLower());
         }
 
         public async Task<Usuario> ObtengaElUsuario(UsuarioLoginDTO usuarioLogin)

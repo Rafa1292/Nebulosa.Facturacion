@@ -13,6 +13,7 @@ namespace Nebulosa.Facturacion.LogicaDeNegocio.CategoriasDeProducto
         Task AgregueLaCategoria(CategoriaDeProductoDTO categoriaDeProducto);
         Task ElimineLaCategoria(int categoriaDeProductoId);
         Task<CategoriaDeProductoDTO> ObtengaLaCategoria(int categoriaDeProductoId);
+        Task<bool> VerifiqueLaCategoria(string nombre);
         Task<List<CategoriaDeProductoDTO>> ObtengaLaListaDeCategorias();
     }
 }

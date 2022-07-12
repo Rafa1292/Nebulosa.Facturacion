@@ -43,6 +43,21 @@ namespace Nebulosa.Facturacion.Repositorio
             return categoriaDeProducto;
         }
 
+        public async Task<bool> VerifiqueLaCategoria(string nombre)
+        {
+            CategoriaDeProducto categoriaDeProducto = await _db.CategoriasDeProducto.FirstOrDefaultAsync(x => x.Nombre.ToLower() == nombre.ToLower());
+
+            if (categoriaDeProducto == null)
+            {
+                return false;
+            }
+
+            categoriaDeProducto.Borrado = false;
+            await ActualiceLaCategoria(categoriaDeProducto);
+            return true;
+        }
+
+
         public async Task<List<CategoriaDeProducto>> ObtengaLaListaDeCategorias()
         {
             List<CategoriaDeProducto> categoriasDeProducto = await _db.CategoriasDeProducto.Where(x => !x.Borrado).ToListAsync();

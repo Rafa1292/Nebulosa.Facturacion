@@ -12,8 +12,8 @@ namespace Nebulosa.Facturacion.LogicaDeNegocio.CategoriasDeProducto
         public static void ValideLaCategoria(CategoriaDeProductoDTO categoriaDeProducto)
         {
             if (string.IsNullOrEmpty(categoriaDeProducto.Nombre))
-            {
-                throw new Exception("Nombre invalido");
+            {                
+                throw new ServerException("Nombre invalido");
             }
         }
     }

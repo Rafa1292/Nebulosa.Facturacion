@@ -41,6 +41,12 @@ namespace Nebulosa.Facturacion.LogicaDeNegocio.CategoriasDeProducto
             return await _accesoADatos.ObtengaLaCategoria(categoriaDeProductoId);
         }
 
+        public async Task<bool> VerifiqueLaCategoria(string nombre)
+        {
+            return await _accesoADatos.VerifiqueLaCategoria(nombre);
+        }
+
+
         public async Task<List<CategoriaDeProductoDTO>> ObtengaLaListaDeCategorias()
         {
             return await _accesoADatos.ObtengaLaListaDeCategorias();

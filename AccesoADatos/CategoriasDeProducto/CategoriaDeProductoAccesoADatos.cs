@@ -41,6 +41,12 @@ namespace Nebulosa.Facturacion.AccesoADatos.CategoriasDeProducto
             return Mapeador.MapeeADTO(categoriaDeProducto);
         }
 
+        public async Task<bool> VerifiqueLaCategoria(string nombre)
+        {
+            return await _repositorio.VerifiqueLaCategoria(nombre);
+        }
+
+
         public async Task<List<CategoriaDeProductoDTO>> ObtengaLaListaDeCategorias()
         {
             List<CategoriaDeProducto> categoriasDeProducto = await _repositorio.ObtengaLaListaDeCategorias();

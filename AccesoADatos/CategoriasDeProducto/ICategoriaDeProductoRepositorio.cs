@@ -12,6 +12,7 @@ namespace Nebulosa.Facturacion.AccesoADatos.CategoriasDeProducto
         Task AgregueLaCategoria(CategoriaDeProducto categoriaDeProducto);
         Task ElimineLaCategoria(int categoriaDeProductoId);
         Task<CategoriaDeProducto> ObtengaLaCategoria(int categoriaDeProductoId);
+        Task<bool> VerifiqueLaCategoria(string nombre);
         Task<List<CategoriaDeProducto>> ObtengaLaListaDeCategorias();
     }
 }

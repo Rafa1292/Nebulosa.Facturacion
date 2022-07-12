@@ -31,7 +31,7 @@ namespace Nebulosa.Facturacion.Servidor.Api
             ObtengaLaListaDeUsuarios(servicio));
         }
 
-        async Task<IResult> AgregueElUsuario(UsuarioDTO usuario, IUsuarioServicio servicio)
+        async Task<RespuestaAPI<bool>> AgregueElUsuario(UsuarioDTO usuario, IUsuarioServicio servicio)
         {
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -39,12 +39,12 @@ namespace Nebulosa.Facturacion.Servidor.Api
                 {
                     await servicio.AgregueElUsuario(usuario);
                     scope.Complete();
-                    return Results.Ok("Usuario agregado correctamente");
+                    return new RespuestaAPI<bool>(false, "Usuario agregado correctamente");
                 }
                 catch (Exception e)
                 {
                     scope.Dispose();
-                    return Results.Conflict(e.Message);
+                    return new RespuestaAPI<bool>(true, e.Message);
                 }
             }
         }

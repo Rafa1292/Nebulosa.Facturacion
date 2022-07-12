@@ -1,5 +1,7 @@
-﻿using Nebulosa.Facturacion.Aplicacion.Servicio;
+﻿using Microsoft.Data.SqlClient;
+using Nebulosa.Facturacion.Aplicacion.Servicio;
 using Nebulosa.Facturacion.Compartida.DTO;
+using Nebulosa.Facturacion.Servidor.Helpers;
 using System.Transactions;
 
 namespace Nebulosa.Facturacion.Servidor.Api
@@ -30,25 +32,47 @@ namespace Nebulosa.Facturacion.Servidor.Api
             ObtengaLaListaDeCategorias(servicio));
         }
 
-        async Task<IResult> AgregueLaCategoria(CategoriaDeProductoDTO categoriaDeProducto, ICategoriaDeProductoServicio servicio)
+        async Task<RespuestaAPI<bool>> AgregueLaCategoria(CategoriaDeProductoDTO categoriaDeProducto, ICategoriaDeProductoServicio servicio)
         {
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
                 try
                 {
+                    if(await VerifiqueLaCategoria(categoriaDeProducto.Nombre, servicio))
+                    {
+                        scope.Complete();
+                        return new RespuestaAPI<bool>(false, "Categoria agregada correctamente");
+                    }
+
                     await servicio.AgregueLaCategoria(categoriaDeProducto);
                     scope.Complete();
-                    return Results.Ok("Categoria agregada correctamente");
+                    return new RespuestaAPI<bool>(false, "Categoria agregada correctamente");
+                }
+                catch (ServerException e)
+                {
+                    scope.Dispose();
+                    return new RespuestaAPI<bool>(true, e.Message);
                 }
                 catch (Exception e)
                 {
-                    scope.Dispose();
-                    return Results.Conflict(e.Message);
+                    return ProcesadorDeExcepcionesHelper<bool>.ProceseLaExcepcion(e);
                 }
             }
         }
 
-        async Task<IResult> ActualiceLaCategoria(CategoriaDeProductoDTO categoriaDeProducto, ICategoriaDeProductoServicio servicio)
+        async Task<bool> VerifiqueLaCategoria(string nombre, ICategoriaDeProductoServicio servicio)
+        {
+            try
+            {
+                return await servicio.VerifiqueLaCategoria(nombre);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        async Task<RespuestaAPI<bool>> ActualiceLaCategoria(CategoriaDeProductoDTO categoriaDeProducto, ICategoriaDeProductoServicio servicio)
         {
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -56,43 +80,55 @@ namespace Nebulosa.Facturacion.Servidor.Api
                 {
                     await servicio.ActualiceLaCategoria(categoriaDeProducto);
                     scope.Complete();
-                    return Results.Ok("Categoria actualizada correctamente");
+                    return new RespuestaAPI<bool>(false, "Categoria actualizada correctamente");
+                }
+                catch (ServerException e)
+                {
+                    scope.Dispose();
+                    return new RespuestaAPI<bool>(true, e.Message);
                 }
                 catch (Exception e)
                 {
-                    scope.Dispose();
-                    return Results.Conflict(e.Message);
+                    return ProcesadorDeExcepcionesHelper<bool>.ProceseLaExcepcion(e);
                 }
             }
         }
 
-        async Task<IResult> ObtengaLaCategoria(int categoriaDeProductoId, ICategoriaDeProductoServicio servicio)
+        async Task<RespuestaAPI<CategoriaDeProductoDTO>> ObtengaLaCategoria(int categoriaDeProductoId, ICategoriaDeProductoServicio servicio)
         {
             try
             {
                 var respuesta = await servicio.ObtengaLaCategoria(categoriaDeProductoId);
-                return Results.Ok(respuesta);
+                return new RespuestaAPI<CategoriaDeProductoDTO>(false, "Solicitud exitosa", respuesta);
+            }
+            catch (ServerException e)
+            {
+                return new RespuestaAPI<CategoriaDeProductoDTO>(true, e.Message);
             }
             catch (Exception e)
             {
-                return Results.Conflict(e.Message);
+                return ProcesadorDeExcepcionesHelper<CategoriaDeProductoDTO>.ProceseLaExcepcion(e);
             }
         }
 
-        async Task<IResult> ObtengaLaListaDeCategorias(ICategoriaDeProductoServicio servicio)
+        async Task<RespuestaAPI<List<CategoriaDeProductoDTO>>> ObtengaLaListaDeCategorias(ICategoriaDeProductoServicio servicio)
         {
             try
             {
                 var respuesta = await servicio.ObtengaLaListaDeCategorias();
-                return Results.Ok(respuesta);
+                return new RespuestaAPI<List<CategoriaDeProductoDTO>>(false, "solicitud exitosa", respuesta);
+            }
+            catch (ServerException e)
+            {
+                return new RespuestaAPI<List<CategoriaDeProductoDTO>>(true, e.Message);
             }
             catch (Exception e)
             {
-                return Results.Conflict(e.Message);
+                return ProcesadorDeExcepcionesHelper<List<CategoriaDeProductoDTO>>.ProceseLaExcepcion(e);
             }
         }
 
-        async Task<IResult> ElimineLaCategoria(int categoriaDeProductoId, ICategoriaDeProductoServicio servicio)
+        async Task<RespuestaAPI<bool>> ElimineLaCategoria(int categoriaDeProductoId, ICategoriaDeProductoServicio servicio)
         {
             using (TransactionScope scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -100,12 +136,16 @@ namespace Nebulosa.Facturacion.Servidor.Api
                 {
                     await servicio.ElimineLaCategoria(categoriaDeProductoId);
                     scope.Complete();
-                    return Results.Ok("Categoria eliminada");
+                    return new RespuestaAPI<bool>(false, "Categoria eliminada");
+                }
+                catch (ServerException e)
+                {
+                    scope.Dispose();
+                    return new RespuestaAPI<bool>(true, e.Message);
                 }
                 catch (Exception e)
                 {
-                    scope.Dispose();
-                    return Results.Conflict(e.Message);
+                    return ProcesadorDeExcepcionesHelper<bool>.ProceseLaExcepcion(e);
                 }
             }
         }
